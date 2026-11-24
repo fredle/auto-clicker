@@ -20,6 +20,13 @@ use windows::Win32::UI::Shell::{
 use windows::Win32::UI::WindowsAndMessaging::*;
 use windows::core::{PCWSTR, w};
 
+/// Height available to a window's content on the main screen, below the
+/// title bar and above the taskbar. Called before the window exists, when
+/// Windows still reports it in the scaled units the window size uses.
+pub fn usable_screen_height() -> f32 {
+    unsafe { GetSystemMetrics(SM_CYFULLSCREEN) as f32 }
+}
+
 // ---------------------------------------------------------------- input
 
 pub struct SystemInput;

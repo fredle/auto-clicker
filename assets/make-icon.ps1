@@ -116,6 +116,19 @@ foreach ($preview in @(@(256, 'icon-preview.png'), @(32, 'icon-preview-32.png'))
     $bmp.Save((Join-Path $out $preview[1]), $png); $bmp.Dispose()
 }
 
+# The window's own icon (title bar and taskbar), compiled into the exe as raw
+# RGBA: 64 x 64, four bytes a pixel.
+$win = Get-Scaled 64
+$rgba = [byte[]]::new(64 * 64 * 4)
+for ($y = 0; $y -lt 64; $y++) {
+    for ($x = 0; $x -lt 64; $x++) {
+        $c = $win.GetPixel($x, $y); $i = ($y * 64 + $x) * 4
+        $rgba[$i] = $c.R; $rgba[$i + 1] = $c.G; $rgba[$i + 2] = $c.B; $rgba[$i + 3] = $c.A
+    }
+}
+$win.Dispose()
+[IO.File]::WriteAllBytes((Join-Path $out 'icon-64.rgba'), $rgba)
+
 $sizes = 16, 20, 24, 32, 40, 48, 64, 128, 256
 $images = foreach ($size in $sizes) {
     $bmp = Get-Scaled $size

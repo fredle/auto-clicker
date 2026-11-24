@@ -22,13 +22,34 @@ const SHOT_SCENES: usize = 4;
 /// Width of the main button.
 const PRIMARY_WIDTH: f32 = 160.0;
 
+/// The window's starting height: the designed height, or less on a screen
+/// too short for it (a 768-line laptop), where the tab content scrolls.
+fn start_height(shots_mode: bool, screen: f32) -> f32 {
+    if shots_mode || screen <= 0.0 {
+        HEIGHT
+    } else {
+        HEIGHT.min(screen - 12.0).max(560.0)
+    }
+}
+
+/// The app's own icon for the title bar and taskbar, drawn by
+/// `assets/make-icon.ps1`. Without it the window shows egui's logo.
+fn window_icon() -> egui::IconData {
+    egui::IconData {
+        rgba: include_bytes!("../assets/icon-64.rgba").to_vec(),
+        width: 64,
+        height: 64,
+    }
+}
+
 pub fn run(args: Vec<String>) -> eframe::Result<()> {
     let shots_mode = Shots::from_args(&args).is_some();
     let settings = if shots_mode { crate::settings::Settings::default() } else { crate::settings::load() };
     let mut viewport = egui::ViewportBuilder::default()
         .with_title("Auto Clicker - Mouse & Key Presser")
-        .with_inner_size([WIDTH, HEIGHT])
-        .with_min_inner_size([460.0, 560.0]);
+        .with_inner_size([WIDTH, start_height(shots_mode, winsys::usable_screen_height())])
+        .with_min_inner_size([460.0, 560.0])
+        .with_icon(window_icon());
     if settings.always_on_top {
         viewport = viewport.with_always_on_top();
     }
@@ -155,7 +176,8 @@ impl App {
             Mode::Sequence => Tab::Sequence,
         };
         Self {
-            version: crate::update::current_version(),
+            // Screenshots show the release version, not this build's "(dev)".
+            version: if live { crate::update::current_version() } else { env!("CARGO_PKG_VERSION").to_owned() },
             key_input: settings.license_key.clone(),
             settings,
             config,
