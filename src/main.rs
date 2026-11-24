@@ -12,6 +12,8 @@ mod keys;
 mod license;
 mod profiles;
 mod settings;
+mod shots;
+mod theme;
 mod update;
 mod winsys;
 
@@ -27,7 +29,9 @@ fn main() {
         update::run_background_update();
         return;
     }
-    update::maybe_spawn_background_update();
+    if !args.iter().any(|a| a == "--shots") {
+        update::maybe_spawn_background_update();
+    }
 
     if let Err(e) = app::run(args) {
         eprintln!("{e}");

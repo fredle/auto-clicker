@@ -10,9 +10,9 @@ Click or press keys automatically at any speed, at one spot or a sequence of the
 
 ## Description
 
-Clicking the same spot a few thousand times is nobody's idea of fun. Idle and sandbox games, repetitive work tools and long form-filling jobs all ask for it, and the usual fixes are a tool that only does one click target, a huge download that wants a review or a bandwidth-sharing prompt before it starts, or a paid app that charges for the useful parts.
+Idle and sandbox games, repetitive work tools and long form-filling jobs can ask for the same click thousands of times. This app clicks for you.
 
-Auto Clicker - Mouse & Key Presser is a small, quiet app that does the job. Pick a mouse button, choose how fast, and press F6. Click where the cursor is, or at a point you pick on screen. Add a key press that taps or holds on the same timer. Stop it after a number of clicks, after a time limit, or by pressing the hotkey again.
+Pick a mouse button, choose how fast, and press F6. Click where the cursor is, or at a point you pick on screen. Add a key press that taps or holds on the same timer. Stop it after a number of clicks, after a time limit, or by pressing the hotkey again.
 
 Need more than one spot? Build a sequence: an ordered list of clicks at points and key presses, each with its own wait, repeated in a loop. Save your favourite set-ups as profiles, each with a hotkey of its own.
 
@@ -66,7 +66,9 @@ Network calls: only an update check against GitHub Releases, about once a day, w
 
 ## Screenshot ideas
 
-1. Main window on the Single target tab: left button, "10 per second" speed line and the green Start button showing F6.
-2. The Sequence tab with a few steps (click at a point, key press, click at another point) and their waits.
-3. The Options tab: start delay, stop after 500 clicks, random variation and the hotkey button.
-4. The full-screen point picker dimming the desktop, next to the window showing the chosen X and Y. Add the tray icon in green while running.
+The app writes these itself in screenshot mode (`--shots`); captions are in `store/shots.json`.
+
+1. Ready: the Clicker tab set to left click at a fixed point and press E every 100 ms, with a 5,000-click limit.
+2. Running: the same set-up at 1,284 clicks, with the green Running status and the progress bar.
+3. Sequence: four steps (two clicks at points, a key press, a double right click), each with its own wait, running in a loop.
+4. Profiles: four saved set-ups with their own hotkeys, after a run that stopped at its 5,000-click limit.

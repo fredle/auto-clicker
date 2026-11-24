@@ -1,0 +1,9 @@
+{
+  "accent": "#C2410C",
+  "scenes": [
+    { "name": "1-ready", "title": "Set it up in seconds", "body": "Pick the button, the spot and the speed, then press F6 anywhere." },
+    { "name": "2-running", "title": "See every run's progress", "body": "A live count and a bar show how close it is to the limit you set." },
+    { "name": "3-sequence", "title": "Click several spots in order", "body": "Mix clicks at points and key presses, each with its own wait, on a loop." },
+    { "name": "4-profiles", "title": "A hotkey for each set-up", "body": "Save set-ups as profiles and start any of them with its own key." }
+  ]
+}
