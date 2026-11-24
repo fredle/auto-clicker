@@ -6,8 +6,14 @@
 #![windows_subsystem = "windows"]
 
 mod app;
+mod control;
+mod engine;
+mod keys;
+mod license;
+mod profiles;
 mod settings;
 mod update;
+mod winsys;
 
 fn main() {
     // First thing, always: Velopack may need to run an install/uninstall/
