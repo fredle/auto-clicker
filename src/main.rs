@@ -1,4 +1,4 @@
-//! Auto Clicker & Key Presser - Click or press keys automatically at any speed, at one spot or a sequence of them.
+//! Auto Clicker - Mouse & Key Presser - Click or press keys automatically at any speed, at one spot or a sequence of them.
 //!
 //!   auto_clicker.exe                 open the app
 //!   auto_clicker.exe --auto-update   internal: background update check/download

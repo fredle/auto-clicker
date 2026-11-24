@@ -369,7 +369,7 @@ unsafe extern "system" fn host_proc(hwnd: HWND, msg: u32, wparam: WPARAM, lparam
 /// Bring the app's main window back from the taskbar or behind others.
 pub fn show_main_window() {
     unsafe {
-        if let Ok(hwnd) = FindWindowW(PCWSTR::null(), w!("Auto Clicker & Key Presser")) {
+        if let Ok(hwnd) = FindWindowW(PCWSTR::null(), w!("Auto Clicker - Mouse & Key Presser")) {
             let _ = ShowWindow(hwnd, SW_RESTORE);
             let _ = SetForegroundWindow(hwnd);
         }

@@ -1,4 +1,4 @@
-# Auto Clicker & Key Presser
+# Auto Clicker - Mouse & Key Presser
 
 Click or press keys automatically at any speed, at one spot or a sequence of them. A small, fast Windows app with no ads, no accounts and no review prompts.
 
@@ -22,7 +22,7 @@ Everything above is free. A one-off unlock (an offline-checked licence key, no s
 
 ## Install
 
-- **Microsoft Store:** search for "Auto Clicker & Key Presser".
+- **Microsoft Store:** search for "Auto Clicker - Mouse & Key Presser".
 - **GitHub Releases:** download `Setup.exe` from the latest release of this repository. It installs per user, needs no admin rights, and updates itself from GitHub Releases (switch off with "Automatically update" at the bottom of the window).
 
 The download is under 15 MB.

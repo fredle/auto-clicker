@@ -1,4 +1,4 @@
-# Auto Clicker & Key Presser
+# Auto Clicker - Mouse & Key Presser
 
 Click or press keys automatically at any speed, at one spot or a sequence of them.
 

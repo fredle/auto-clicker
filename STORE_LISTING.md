@@ -1,8 +1,8 @@
-# Store listing - Auto Clicker & Key Presser
+# Store listing - Auto Clicker - Mouse & Key Presser
 
 ## Product name
 
-Auto Clicker & Key Presser
+Auto Clicker - Mouse & Key Presser
 
 ## Short description
 
@@ -12,7 +12,7 @@ Click or press keys automatically at any speed, at one spot or a sequence of the
 
 Clicking the same spot a few thousand times is nobody's idea of fun. Idle and sandbox games, repetitive work tools and long form-filling jobs all ask for it, and the usual fixes are a tool that only does one click target, a huge download that wants a review or a bandwidth-sharing prompt before it starts, or a paid app that charges for the useful parts.
 
-Auto Clicker & Key Presser is a small, quiet app that does the job. Pick a mouse button, choose how fast, and press F6. Click where the cursor is, or at a point you pick on screen. Add a key press that taps or holds on the same timer. Stop it after a number of clicks, after a time limit, or by pressing the hotkey again.
+Auto Clicker - Mouse & Key Presser is a small, quiet app that does the job. Pick a mouse button, choose how fast, and press F6. Click where the cursor is, or at a point you pick on screen. Add a key press that taps or holds on the same timer. Stop it after a number of clicks, after a time limit, or by pressing the hotkey again.
 
 Need more than one spot? Build a sequence: an ordered list of clicks at points and key presses, each with its own wait, repeated in a loop. Save your favourite set-ups as profiles, each with a hotkey of its own.
 

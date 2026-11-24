@@ -18,7 +18,7 @@ const HEIGHT: f32 = 640.0;
 pub fn run(_args: Vec<String>) -> eframe::Result<()> {
     let settings = crate::settings::load();
     let mut viewport = egui::ViewportBuilder::default()
-        .with_title("Auto Clicker & Key Presser")
+        .with_title("Auto Clicker - Mouse & Key Presser")
         .with_inner_size([WIDTH, HEIGHT])
         .with_min_inner_size([420.0, 480.0]);
     if settings.always_on_top {
@@ -29,7 +29,7 @@ pub fn run(_args: Vec<String>) -> eframe::Result<()> {
         ..Default::default()
     };
     eframe::run_native(
-        "Auto Clicker & Key Presser",
+        "Auto Clicker - Mouse & Key Presser",
         options,
         Box::new(move |cc| Ok(Box::new(App::new(cc, settings)))),
     )
