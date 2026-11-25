@@ -20,7 +20,7 @@ The speed goes from one click an hour to a thousand a second, set in millisecond
 
 A tray icon next to the clock turns green while a run is active, and the hotkey works even when the window is minimised. The window can stay on top while you work.
 
-No ads, no accounts, no review prompts and no telemetry. The only network use is the update check. It installs per user and does not ask for administrator rights.
+No ads, no accounts, no review prompts and no telemetry. The only network use is the update check, and a feedback note if you choose to send one. It installs per user and does not ask for administrator rights.
 
 Good to know: Windows does not allow normal apps to send clicks or keys into windows that run as administrator, so this app cannot click inside them.
 
@@ -63,6 +63,8 @@ Productivity (subcategory: Utilities). If Utilities is not offered, use Utilitie
 Stored locally in %LOCALAPPDATA%\AutoClicker: your settings (hotkey, click and key options, window preference, update preference) and any saved profiles. Nothing leaves your PC.
 
 Network calls: only an update check against GitHub Releases, about once a day, which can be switched off with the "Automatically update" option. No telemetry, no analytics, no accounts, no advertising. The app does not read the screen, record mouse movement or log keystrokes; it only sends the clicks and keys you set up.
+
+Feedback: the "What would make this better?" link in the window lets you send the developer a short note. Only the note, the app's name and version, and the platform are sent, to the developer's server at feedback.leatham.net, and only when you press Send. No name, email address or device identifier is sent, and the server does not keep IP addresses. Notes are used only to improve the app and are never shared or sold.
 
 ## Screenshot ideas
 

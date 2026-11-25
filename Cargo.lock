@@ -112,6 +112,7 @@ dependencies = [
  "eframe",
  "serde",
  "serde_json",
+ "ureq",
  "velopack",
  "windows",
  "winresource",

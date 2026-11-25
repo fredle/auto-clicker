@@ -6,6 +6,7 @@
 #![windows_subsystem = "windows"]
 
 mod app;
+mod feedback;
 mod control;
 mod engine;
 mod keys;

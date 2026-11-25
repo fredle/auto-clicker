@@ -113,6 +113,8 @@ struct RunView {
 pub struct App {
     settings: crate::settings::Settings,
     version: String,
+    /// "What would make this better?" (src/feedback.rs).
+    feedback: crate::feedback::Feedback,
     config: Config,
     profiles: Vec<Profile>,
     shared: Arc<Shared>,
@@ -178,6 +180,7 @@ impl App {
         Self {
             // Screenshots show the release version, not this build's "(dev)".
             version: if live { crate::update::current_version() } else { env!("CARGO_PKG_VERSION").to_owned() },
+            feedback: Default::default(),
             key_input: settings.license_key.clone(),
             settings,
             config,
@@ -1127,6 +1130,8 @@ impl App {
             }
             ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
                 ui.label(egui::RichText::new(format!("v{}", self.version)).font(theme::small()).color(p.muted));
+                ui.add_space(8.0);
+                self.feedback.link(ui);
             });
         });
     }
@@ -1371,6 +1376,8 @@ impl eframe::App for App {
                     }
                 });
             });
+            let feedback_ctx = ui_root.ctx().clone();
+        self.feedback.show(&feedback_ctx, &self.version, self.shots.is_some());
     }
 
     fn on_exit(&mut self, _gl: Option<&eframe::glow::Context>) {
